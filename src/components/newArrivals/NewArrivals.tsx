@@ -2,7 +2,6 @@
 import "./NewArrivals.css";
 
 import { useNavigate } from "react-router-dom";
-import { toyData } from "../../data/toyData";
 import { useState } from "react";
 
 import type { Toy } from "../../data/toyData";

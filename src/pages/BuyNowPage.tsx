@@ -1,17 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./BuyNowPage.css"; // ✅ Make sure this file exists in SAME folder
-
-interface Toy {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  rating?: number;
-  category?: number;
-  agegroup?: string;
-  description?: string;
-}
+import "./BuyNowPage.css";
 
 const BuyNowPage: React.FC = () => {
   const location = useLocation();

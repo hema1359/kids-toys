@@ -9,9 +9,9 @@ interface ToyListPageProps {
   categoryId: number;
   categoryColor: string;
   sampleToys: Toy[];
-  ageGroup: string;
-  wishlisted: number[];               
-  toggleWishlist: (id: number) => void;
+  ageGroup?: string;
+  wishlisted?: number[];
+  toggleWishlist?: (id: number) => void;
 }
 
 interface Toy {
@@ -40,9 +40,8 @@ const ToyListPage = ({
   categoryId,
   categoryColor,
   sampleToys,
-  ageGroup,
-  wishlisted,
-  toggleWishlist
+  wishlisted = [],
+  toggleWishlist = () => {}
 }: ToyListPageProps) => {
   const navigate = useNavigate();
   // const [wishlisted, setWishlisted] = useState<number[]>([]);
@@ -87,7 +86,7 @@ const handleBuyNow = (toy: Toy) => {
 
       <div className="toy-list-content">
         <div className="toys-grid">
-            {toysToDisplay.map((toy) => { console.log("IMAGE CHECK:", toy.name, toy.image); // ✅ ADD HERE(
+            {toysToDisplay.map((toy) => {
             return(
               <div key={toy.id} className="toy-card">
                   <div className="toy-image-container" style={{ position: 'relative' }}>
