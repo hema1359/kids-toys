@@ -1,0 +1,227 @@
+body{
+    font-family: 'Baloo 2', cursive;
+}
+.age-category-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  /* background: linear-gradient(135deg, #a5c9dd 0%, #c3cfe2 100%); */
+
+  background-image: url("/images/r1.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  min-height: 600px;
+}
+
+.age-category-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Baloo 2', cursive;
+  color: #333;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.circles-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.age-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.age-item-card:hover {
+  transform: translateY(-10px);
+}
+
+.age-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.age-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  z-index: 2;
+}
+
+.age-item-card:hover .age-circle {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.age-item-card:hover .age-circle::before {
+  transform: scale(1);
+}
+
+.circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.circle-icon {
+  font-size: 4rem;
+  font-family: 'Baloo 2', cursive;
+  animation: float 3s ease-in-out infinite;
+}
+
+.age-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.age-details {
+  text-align: center;
+  width: 250px;
+}
+
+.circle-label {
+  font-size: 2rem;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.circle-age-range {
+  font-size: 1.5rem;
+  font-family: 'Baloo 2', cursive;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .age-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-icon {
+    font-size: 3rem;
+  }
+
+  .circle-label {
+    font-size: 1.5rem;
+  }
+
+  .circle-age-range {
+    font-size: 0.9rem;
+  }
+
+  .age-category-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .circles-wrapper {
+    gap: 20px;
+  }
+
+  .age-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-icon {
+    font-size: 2.5rem;
+  }
+
+  .circle-label {
+    font-size: 1.3rem;
+  }
+
+  .circle-age-range {
+    font-size: 0.8rem;
+  }
+
+  .age-category-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .age-category-container {
+    padding: 40px 10px;
+  }
+
+  .circles-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .age-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-icon {
+    font-size: 2rem;
+  }
+
+  .circle-label {
+    font-size: 1.1rem;
+  }
+
+  .circle-age-range {
+    font-size: 0.7rem;
+  }
+
+  .age-category-title {
+    font-size: 1.5rem;
+  }
+}

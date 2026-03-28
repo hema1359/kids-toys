@@ -1,0 +1,10 @@
+.buy-now-btn {
+  display: block;
+  margin-top: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}

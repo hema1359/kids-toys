@@ -1,0 +1,172 @@
+/* Home Page Styles */
+
+
+body {
+  
+   font-family: 'Baloo 2', cursive;
+}
+.services-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home Intro Section */
+.services-intro {
+  /* background-image: url("../../assets/images/homewelcome.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   color:purple;
+  padding: 100px 20px;
+  text-align: center;
+  
+}
+
+.intro-content h2 {
+
+  color:rgb(6, 100, 208);
+  font-size:4rem;
+  font-family: 'Baloo 2', cursive;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.intro-content p {
+ 
+  font-family: 'Baloo 2', cursive;
+  color: rgba(220, 4, 159, 0.7);
+  font-size: 2rem;
+  opacity: 0.95;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #667eea;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card i {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-intro {
+    padding: 40px 15px;
+  }
+
+  .intro-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+  }
+
+  .why-choose-us {
+    padding: 40px 15px;
+  }
+
+  .why-choose-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 20px 15px;
+  }
+
+  .feature-card i {
+    font-size: 2.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-intro {
+    padding: 30px 15px;
+  }
+
+  .intro-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-content p {
+    font-size: 0.9rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+}
+

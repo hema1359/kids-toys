@@ -1,0 +1,54 @@
+/* Container to align content like Kiddokart pages */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+ 
+}
+
+/* About block inside container */
+.about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 40px;
+  
+}
+
+/* Each zig-zag section */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg,#fff6e5,#e8f8ff,#fff0f6);
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
+}
+
+/* Zig-zag layout */
+.left-image .about-image { order: 1; }
+.left-image .about-content { order: 2; }
+.right-image .about-image { order: 2; }
+.right-image .about-content { order: 1; }
+
+/* Retangular image */
+.about-image img {
+  width: 300px;        /* adjust width as needed */
+  height: 200px;       /* rectangular aspect ratio */
+  object-fit: cover;   /* ensures full image fits without distortion */
+  border-radius: 12px; /* slightly rounded corners, optional */
+  border: 2px solid #FF7F50; /* orange border to keep Kiddokart branding */
+}
+
+/* Text content */
+.about-content { flex: 1; min-width: 250px; }
+.about-content h3 { margin: 0 0 12px 0; font-size: 1.8rem; color: #0e27cb; }
+.about-content p { margin: 0; font-size: 1.2rem; line-height: 1.6; color: #333; }
+
+
+
+
+

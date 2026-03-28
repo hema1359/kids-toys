@@ -1,0 +1,86 @@
+body {
+  
+   font-family: 'Baloo 2', cursive;
+}
+.contact-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.contact-content{
+  background-image: url("/images/plainbg.jpg");
+  /* background-color: #26bca6; */
+  color: rgb(162, 11, 152);
+  margin-top: 50px;
+ 
+}
+
+
+
+/* top section */
+
+.contact-top {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.contact-column p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.contact-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-column ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-column ul li:hover {
+  color: hsla(189, 78%, 2%, 0.848);
+  padding-left: 5px;
+}
+
+.contact-column p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.kiddo-logo img {
+  height: 70px;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+/* social */
+
+.social-icons i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+  color: #7f1898;
+  transition: 0.3s;
+}
+
+.social-icons i:hover{
+  color: #47cee9;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .contact-top {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-top {
+    grid-template-columns: 1fr;
+  }
+}
