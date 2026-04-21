@@ -57,7 +57,7 @@ const toggleWishlist = (id: number) => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       
-      // Toy Routes 
+      {/* Toy Routes */}
       <Route path="/action-toys" element={<ActionToysPage
               toys={toyData}
               wishlisted={wishlisted}
@@ -84,10 +84,8 @@ const toggleWishlist = (id: number) => {
               toggleWishlist={toggleWishlist}/>} />  
 
       
-      // Age Routes
-
+      {/* Age Routes */}
      <Route path="/age/:age" element={<AgePage />} />
-console.log("AGE PAGE WORKING");
       <Route path="/age/newborn" element={<Newborn
               toys={toyData}
               wishlisted={wishlisted}
@@ -108,11 +106,10 @@ console.log("AGE PAGE WORKING");
               wishlisted={wishlisted}
               toggleWishlist={toggleWishlist}/>} />
               
-      <Route path="/age/children" element={<Children 
+      <Route path="/age/children" element={<Children
               toys={toyData}
               wishlisted={wishlisted}
               toggleWishlist={toggleWishlist}/>} />
-console.log("AGE PAGE WORKING");
 
      
       <Route path="/order-summary" element={<OrderSummary />} />

@@ -9,8 +9,9 @@ function Header()
 {  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
+  void toggleDropdown;
 
   
      return (
